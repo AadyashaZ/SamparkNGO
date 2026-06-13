@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Hands NGO</title>
+    <link rel="stylesheet" href="sampark.css">
+
+</head>
+
+<body>
+
+    <div id="loader">
+        <div>
+            <h1 id="fact">
+                ✨ Did you know? As this page is loading, thousands of kids around the world are getting homes! ✨
+            </h1>
+
+            <p>👆 Click for another fact!</p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-left">
+            <img src="Sampark logo.png" alt="Sampark Logo" class="logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#volunteer">Volunteer</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="darkModeBtn">🌙</button>
+    </nav>
+
+    <header>
+        <h1>Helping Hands With Sampark</h1>
+        <p>Together We Can Make a Difference</p>
+    </header>
+
+
+    <div class="hero">
+        <h1>Spread Kindness</h1>
+        <p>Helping communities through education, health, and support.</p>
+        <button class="btn" onclick="openPopup()">
+            Donate Now
+        </button>
+    </div>
+
+    <section id="quotes">
+        <div class="section-1">
+            <h2>🌟 Daily Kindness Quote</h2>
+
+            <p id="quote">
+                Click the button to get inspired!
+            </p>
+
+            <button id="quoteBtn" class="btn">
+                Inspire Me 💛
+            </button>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <div class="section">
+                <h2>Our Mission</h2>
+                <p>
+                    We work to improve lives by providing education,
+                    healthcare, and opportunities to underprivileged communities.
+                </p>
+        </section>
+
+
+        <section id="gallery">
+
+            <section id="gallery">
+                <h2>📸 Our Journey</h2>
+
+                <div class="gallery-container">
+                    <div class="gallery-track">
+                        <img src="NGO gallery 1.jpg">
+                        <img src="NGO gallery 2.jpg">
+                        <img src="NGO gallery 3.jpeg">
+                        <img src="NGO gallery 4.jpg">
+
+                        <!-- Duplicate them -->
+                        <img src="NGO gallery 1.jpg">
+                        <img src="NGO gallery 2.jpg">
+                        <img src="NGO gallery 3.jpeg">
+                        <img src="NGO gallery 4.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <section id="help">
+
+                <div class="section">
+
+                    <h2>🆘 Need Help?</h2>
+
+                    <p>
+                        Facing difficulties? Sampark is here to support you.
+                    </p>
+
+                    <button class="btn" onclick="openHelpPopup()">
+                        Request Help
+                    </button>
+
+                </div>
+
+
+            </section>
+            <section id="programs">
+
+                <div class="section">
+                    <h2>Our Programs</h2>
+
+                    <div class="cards">
+
+                        <div class="card">
+                            <h3>Education</h3>
+                            <p>Providing books, scholarships, and learning support.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Healthcare</h3>
+                            <p>Free medical camps and health awareness programs.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Environment</h3>
+                            <p>Tree plantation drives and clean-up initiatives.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+            <div class="container2">
+                <section id="volunteer">
+                    <div class="section">
+                        <h2>Become a Volunteer</h2>
+                        <p>
+                            Join our team and help create positive change in society.
+                        </p>
+                        <button class="btn" onclick="openVolunteerPopup()">
+                            Join Us
+                        </button>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <div class="section">
+                        <h2>Contact Us</h2>
+                        <p>Email: info@helpinghands.org</p>
+                        <p>Phone: +91 98765 43210</p>
+                    </div>
+                </section>
+            </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Helping Hands NGO. All Rights Reserved.</p>
+    </footer>
+
+    </div>
+
+    <img src="sampark_mascot_hat_bag.png" id="mascot" alt="Sampark Mascot">
+
+    <div id="donatePopup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closePopup()">&times;</span>
+
+            <p>Support Sampark💲</p>
+
+            <p id="paymentStatus">
+                ⏳ Waiting for donation...
+            </p>
+
+            <button onclick="paymentDone()" class="donate-btn">
+                I Have Donated ❤️
+            </button>
+
+            <p id="thankYouMsg"></p>
+        </div>
+
+    </div>
+
+    <div id="volunteerPopup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closeVolunteerPopup()">&times;</span>
+
+            <h2>Become a Volunteer 🤝</h2>
+
+            <input type="text" id="volunteerName" placeholder="Your Name">
+
+            <button class="donate-btn" onclick="submitVolunteer()">
+                Join Sampark ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+    <button id="topBtn" title="Go to top">🍄</button>
+
+    <script src="sampark.js"></script>
+
+
+    <div id="helpPopup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closeHelpPopup()">&times;</span>
+
+            <h2>🆘 Request Help</h2>
+
+            <input type="text" id="helpName" placeholder="Your Name">
+
+            <input type="tel" id="helpPhone" placeholder="Phone Number">
+
+            <input type="text" id="helpLocation" placeholder="Location">
+
+            <select id="helpType">
+
+                <option value="">Select Help Type</option>
+
+                <option>Education</option>
+
+                <option>Medical Support</option>
+
+                <option>Food Assistance</option>
+
+                <option>Financial Support</option>
+
+                <option>Emergency Help</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <textarea id="helpDescription" placeholder="Describe your situation..." rows="4">
+        </textarea>
+
+            <button class="donate-btn" onclick="submitHelp()">
+                Submit Request ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
